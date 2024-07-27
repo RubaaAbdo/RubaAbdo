@@ -63,7 +63,7 @@ a {
 /* Header Start */
 #home {
     background-color: var(--bg-primary);
-    height: 100vh;
+    height: fit-content;
 }
 
 #home .navbar {
@@ -71,8 +71,7 @@ a {
     border-bottom: 1px solid #ccc;
     position: fixed;
     width: 100%;
-    top: 0;
-    z-index: 1000; /* Ensure navbar is above other content */
+    z-index: 1000; /* Ensure navbar is on top */
 }
 
 #home .navbar nav {
@@ -109,7 +108,7 @@ a {
     max-width: 1100px;
     margin: auto;
     padding: 5rem 2rem 0;
-    height: calc(100vh - 60px); /* Adjust height to account for navbar */
+    height: 100%;
 }
 
 #home .header-content .content-text {
@@ -156,14 +155,13 @@ a {
 header .header-content img {
     max-width: 450px;
 }
-.container{
-    padding: 0 1rem;
-}
+
 /* Header End */
 
 /* About Start */
 #about {
-    padding: 6rem 2rem; /* Adjust padding for better responsiveness */
+    padding-top: 6rem;
+    padding-bottom: 1rem;
 }
 
 #about h2, 
@@ -216,7 +214,7 @@ header .header-content img {
 
 /* Contact Start */
 #Contact {
-    padding: 4rem 2rem; /* Adjust padding for better responsiveness */
+    padding: 4rem 0;
 }
 
 #Contact .row {
@@ -259,17 +257,10 @@ header .header-content img {
         display: block;
         text-align: center;
     }
-    .container{
-        padding: 0 1rem;
-    }
 
     #home .navbar nav ul {
         margin-top: 20px;
     }
-    #home .header-content .Contact-text {
-        margin-top: 20px;
-    }
-
 
     #home .navbar nav ul a {
         margin: 0 8px;
@@ -310,9 +301,6 @@ header .header-content img {
     #home .header-content h1 {
         font-size: 35px;
     }
-    #home .header-content .Contact-text {
-        margin-top: 20px;
-    }
 
     #home .header-content p span,
     #home .header-content .title {
@@ -334,5 +322,20 @@ header .header-content img {
 
     #Contact .row {
         padding: 2rem 1rem;
+    }
+
+    #Contact .row input,
+    #Contact .row textarea {
+        padding: 8px;
+    }
+
+    #Contact .row {
+        padding: 1rem;
+        margin-top: 2rem;
+    }
+
+    #about .about-content {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
     }
 }
